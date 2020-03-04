@@ -1424,6 +1424,7 @@
 #include "code\modules\awaymissions\trigger.dm"
 #include "code\modules\awaymissions\zlevel.dm"
 #include "code\modules\blackmesa13\clothing.dm"
+#include "code\modules\blackmesa13\weapons.dm"
 #include "code\modules\blob\blob.dm"
 #include "code\modules\butchery\butchery.dm"
 #include "code\modules\butchery\remains.dm"
