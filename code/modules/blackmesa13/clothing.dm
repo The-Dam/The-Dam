@@ -69,7 +69,7 @@
 	name = "TEMPLATE"
 	desc = "YOU'RE NOT MEANT TO SEE THIS"
 	icon = 'code/modules/blackmesa13/mesaclothing.dmi'
-	icon_override = 'code/modules/blackmesa13/mesaclothing.dmi
+	icon_override = 'code/modules/blackmesa13/mesaclothing.dmi'
 	icon_state = null
 	item_state = null
 	force = 10
@@ -102,7 +102,6 @@
 	icon_state = "guarduniform_s"
 	item_state = "guarduniform"
 	worn_state = "guarduniform_s"
-	item_icons = list(
 
 /obj/item/clothing/suit/storage/blackmesa/guard
 	name = "Guard Plate Carrier"
@@ -143,9 +142,8 @@
 	icon_state = "scientistuniform_s"
 	item_state = "scientistuniform"
 	worn_state = "scientistuniform_s"
-	item_icons = list(
 
-/obj/item/clothing/shoes/blackmesa/guard
+/obj/item/clothing/shoes/blackmesa/scientist
 	name = "Brown Sneakers"
 	desc = "Bill Nye the science guy."
 	icon_state = "scientistboots"
