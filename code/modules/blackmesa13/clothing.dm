@@ -137,7 +137,7 @@
 //SCIENTIST//
 
 /obj/item/clothing/under/blackmesa/scientist
-	name = "Guard Uniform"
+	name = "Scientist Uniform"
 	desc = "A cyan shirt and khaki pants, indicating that you're from the science team."
 	icon_state = "scientistuniform_s"
 	item_state = "scientistuniform"

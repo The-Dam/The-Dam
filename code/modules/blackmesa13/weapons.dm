@@ -14,6 +14,7 @@
 	safety_icon = null
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2)
 	fire_delay = 7
+	empty_icon = FALSE
 
 /obj/item/weapon/gun/projectile/pistol/blackmesa/glock17
 	name = "Glock 17"
@@ -21,7 +22,7 @@
 	magazine_type = /obj/item/ammo_magazine/blackmesa/glock17
 	allowed_magazines = /obj/item/ammo_magazine/blackmesa/glock17
 	icon_state = "glock17"
-	item_state = "glock17"
+	item_state = null
 	fire_delay = 7
 
 /obj/item/ammo_magazine/blackmesa
@@ -39,3 +40,25 @@
 	name = "Glock 17 Magazine"
 	icon_state = "glock17mag"
 	max_ammo = 17
+
+/obj/item/projectile/blackmesa
+	name = "TEMPLATE"
+	icon = 'code/modules/blackmesa13/mesaweapons.dmi'
+	icon_state = null
+	damage = 20
+	damage_type = BURN
+	damage_flags = 0
+
+/obj/item/projectile/blackmesa/houndeye
+	name = "Houndeye Soundwave"
+	icon_state = "soundwave"
+	damage = 40
+	damage_type = BRUTE
+	armor_penetration = 50
+	stun = 1
+
+/obj/item/projectile/blackmesa/houndeye/on_hit(var/atom/movable/target, var/blocked = 0)
+	if(istype(target))
+		var/throwdir = get_dir(firer,target)
+		target.throw_at(get_edge_target_turf(target, throwdir),10,10)
+		return 1
