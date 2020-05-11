@@ -32,13 +32,13 @@ GLOBAL_DATUM_INIT(ert, /datum/antagonist/ert, new)
 
 /datum/antagonist/ert/Initialize()
 	..()
-	leader_welcome_text = "As leader of the Emergency Response Team, you answer only to [GLOB.using_map.company_name], and have authority to override the Captain where it is necessary to achieve your mission goals. It is recommended that you attempt to cooperate with the captain where possible, however."
+	leader_welcome_text = "As leader of the Hazardous Environment Combat Unit, you answer only to [GLOB.using_map.company_name], and have authority to terminate personnel where it is necessary to achieve your mission goals. It is recommended that you attempt to cooperate with the facility where possible, however."
 	welcome_text = "As member of the Emergency Response Team, you answer only to your leader and [GLOB.using_map.company_name] officials."
 
 /datum/antagonist/ert/greet(var/datum/mind/player)
 	if(!..())
 		return
-	to_chat(player.current, "The Emergency Response Team works for Asset Protection; your job is to protect [GLOB.using_map.company_name]'s ass-ets. There is a code red alert on [station_name()], you are tasked to go and fix the problem.")
+	to_chat(player.current, "The Hazardous Environment Combat Unit works for the United States Marine Corps; your job is to protect [GLOB.using_map.company_name]'s ass-ets. There is a code red alert on [station_name()], you are tasked to go and fix the problem.")
 	to_chat(player.current, "You should first gear up and discuss a plan with your team. More members may be joining, don't move out before you're ready.")
 
 //Equip proc has been moved to the map specific folders.

@@ -167,7 +167,7 @@
 			SSstatistics.add_field("alert_keycard_auth_maintRevoke",1)
 		if("Emergency Response Team")
 			if(is_ert_blocked())
-				to_chat(usr, "<span class='warning'>All emergency response teams are dispatched and can not be called at this time.</span>")
+				to_chat(usr, "<span class='warning'>All HECU teams are dispatched and can not be called at this time.</span>")
 				return
 
 			trigger_armed_response_team(1)

@@ -108,11 +108,11 @@ proc/trigger_armed_response_team(var/force = 0)
 
 	// there's only a certain chance a team will be sent
 	if(!prob(send_team_chance))
-		command_announcement.Announce("It would appear that an emergency response team was requested for [station_name()]. Unfortunately, we were unable to send one at this time.", "[GLOB.using_map.boss_name]")
+		command_announcement.Announce("It would appear that a Hazardous Environment Combat Unit was requested for [station_name()]. Unfortunately, we were unable to send one at this time.", "[GLOB.using_map.boss_name]")
 		can_call_ert = 0 // Only one call per round, ladies.
 		return
 
-	command_announcement.Announce("It would appear that an emergency response team was requested for [station_name()]. We will prepare and send one as soon as possible.", "[GLOB.using_map.boss_name]")
+	command_announcement.Announce("It would appear that a Hazardous Environment Combat Unit was requested for [station_name()]. We will prepare and send one as soon as possible.", "[GLOB.using_map.boss_name]")
 	evacuation_controller.add_can_call_predicate(new/datum/evacuation_predicate/ert())
 
 	can_call_ert = 0 // Only one call per round, gentleman.
@@ -134,5 +134,5 @@ proc/trigger_armed_response_team(var/force = 0)
 /datum/evacuation_predicate/ert/can_call(var/user)
 	if(world.time >= prevent_until)
 		return TRUE
-	to_chat(user, "<span class='warning'>An emergency response team has been dispatched. Evacuation requests will be denied until [duration2stationtime(prevent_until - world.time)].</span>")
+	to_chat(user, "<span class='warning'>A Hazardous Environment Combat Unit has been dispatched. Evacuation requests will be denied until [duration2stationtime(prevent_until - world.time)].</span>")
 	return FALSE
