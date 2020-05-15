@@ -1,4 +1,4 @@
-/var/server_name = "Baystation 12"
+/var/server_name = "The Dam - Stories from Black Mesa"
 
 /var/game_id = null
 /hook/global_init/proc/generate_gameid()
@@ -546,9 +546,9 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"https://forums.baystation12.net/\">" //Change this to wherever you want the hub to link to.
+	s += "<a href=\"https://discord.com/invite/6W6eWuf\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
-	s += "Forums"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
 
